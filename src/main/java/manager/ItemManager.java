@@ -5,11 +5,9 @@ import model.Category;
 import model.Item;
 import model.User;
 
-import javax.jws.soap.SOAPBinding;
 import java.sql.*;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ItemManager {

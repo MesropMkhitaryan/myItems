@@ -17,11 +17,14 @@ public class MyItemsServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int userId = Integer.parseInt(req.getParameter("userId"));
+
+
         req.setAttribute("items", itemManager.getItemByUser(userId));
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        String servletPath = req.getServletPath();
+        req.setAttribute("my",servletPath);
     }
 }
